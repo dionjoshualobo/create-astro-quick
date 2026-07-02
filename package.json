@@ -1,0 +1,25 @@
+{
+  "name": "create-astro-quick",
+  "version": "0.1.0",
+  "description": "Quickly scaffold Astro Projects",
+  "keywords": [
+    "astro",
+    "cli",
+    "scaffold"
+  ],
+  "homepage": "https://github.com/dionjoshualobo/create-astro-quick#readme",
+  "bugs": {
+    "url": "https://github.com/dionjoshualobo/create-astro-quick/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dionjoshualobo/create-astro-quick.git"
+  },
+  "license": "MIT",
+  "author": "Dion Joshua Lobo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
