@@ -18,9 +18,12 @@
   "license": "MIT",
   "author": "Dion Joshua Lobo",
   "type": "module",
-  "main": "index.js",
+  "bin": {
+    "create-astro-quick": "./dist/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
