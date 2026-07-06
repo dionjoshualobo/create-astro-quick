@@ -2,18 +2,15 @@
 
 import { getArgs } from "./cli/args.js";
 import { parseArgs } from "./cli/parse.js";
-import { askProjectName, askTargetDirectory } from "./cli/prompts.js"
+import { askProjectLocation} from "./cli/prompts.js"
 
 async function main() {
   const cli = parseArgs(getArgs());
   
-  const projectName = await askProjectName(cli.projectName);
-
-  const targetDirectory = await askTargetDirectory();
+  const location = await askProjectLocation(cli.location);
 
   console.log({
-    projectName,
-    targetDirectory,
+    location,
   });
 
 }

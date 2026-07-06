@@ -1,15 +1,15 @@
 import { text, isCancel, cancel, select } from "@clack/prompts";
 
-export async function askProjectName(
-  projectName?: string,
+export async function askProjectLocation(
+  location?: string,
 ): Promise<string> {
-  if (projectName) {
-    return projectName;
+  if (location) {
+    return location;
   }
   
   const value = await text({
-    message: "Project name",
-    placeholder: "my-astro-app",
+    message: "Where should we create your project?",
+    placeholder: "./my-project",
 });
 
   if (isCancel(value)) {

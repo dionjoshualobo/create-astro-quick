@@ -1,4 +1,4 @@
 export interface CliArgs {
-  projectName?: string;
+  location?: string;
   flags: string[];
 }
