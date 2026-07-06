@@ -2,7 +2,15 @@
 
 import { getArgs } from "./cli/args.js";
 import { parseArgs } from "./cli/parse.js";
+import { askProjectName } from "./cli/prompts.js"
 
-const cli = parseArgs(getArgs());
+async function main() {
+  const cli = parseArgs(getArgs());
+  
+  const projectName = await askProjectName(cli.projectName);
 
-console.log(cli);
+  console.log(projectName);
+
+}
+
+main();
