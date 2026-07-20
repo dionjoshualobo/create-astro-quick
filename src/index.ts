@@ -2,7 +2,9 @@
 
 import { getArgs } from "./cli/args.js";
 import { parseArgs } from "./cli/parse.js";
-import { askProjectLocation} from "./cli/prompts.js"
+import { askProjectLocation, 
+         askTemplate, 
+} from "./cli/prompts.js"
 import { createAstroProject } from "./astro/create.js";
 import { ExecaError } from "execa";
 
@@ -11,7 +13,9 @@ async function main() {
   
   const location = await askProjectLocation(cli.location);
 
-  await createAstroProject(location);
+  const template = await askTemplate();
+
+  await createAstroProject(location, template);
 
 }
 

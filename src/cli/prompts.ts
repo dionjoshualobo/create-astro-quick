@@ -42,3 +42,34 @@ export async function askTargetDirectory(): Promise<"current" | "new"> {
 
   return value;
 }
+
+export async function askTemplate(): Promise<"basics" | "blog" | "starlight" | "minimal"> {
+  const template = await select({
+    message: "How would you like to start your new project?",
+    options: [
+      {
+        value: "basics",
+        label: "A basic, helpful starter project (recommended)",
+      },
+      {
+        value: "blog",
+        label: "Use blog template",
+      },
+      {
+        value: "starlight",
+        label: "Use docs (Starlight) template",
+      },
+      {
+        value: "minimal",
+        label: "Use minimal (empty) template",
+      },
+    ],
+  });
+
+  if (isCancel(template)) {
+    cancel("Operation cancelled");
+    process.exit(0);
+  }
+  
+  return template;
+}
