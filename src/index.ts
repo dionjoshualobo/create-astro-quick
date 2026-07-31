@@ -15,7 +15,7 @@ async function main() {
 
   const template = await askTemplate();
 
-  await createAstroProject(location, template);
+  await createAstroProject({location, template,});
 
 }
 
